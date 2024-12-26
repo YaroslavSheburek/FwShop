@@ -1,0 +1,15 @@
+.header-section {
+    background-color: rgb(19, 19, 19);
+    opacity: 0.9;
+    color:white;
+    }
+
+    .order {
+        width: 100%;
+        padding: 20px;
+        display: none;
+        opacity: 0;
+    }
+
+    
+    

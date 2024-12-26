@@ -1,0 +1,51 @@
+[
+    {
+      "id": "Iphone",
+      "title": "Iphone 16",
+      "price": 1999,
+      "image": "img/iphone.png",
+      "description": "  Дисплей 6.1 Батарея 1млн Ват OS 18.1"
+    },
+    {   "id": "SamsungN20",
+        "title": "Samsung Galaxy Note 20",
+        "price": 499,
+        "image": "img/note20.png",
+        "description": "Дисплей 1.1 Батарея 8млн Ват OS Android 13"
+
+    },
+      {
+        "id": "SamsungS24",
+        "title": "Samsung Galaxy S24",
+        "price": 999,
+        "image": "img/s23.png",
+        "description": " Дисплей 7.1 Батарея 5млн Ват OS Android 15"
+      },
+      {
+        "id": "RedmiN12",
+        "title": "Redmi Note 12",
+        "price": 199,
+        "image": "img/redmi.png",
+        "description": "Дисплей 10 Батарея 500к Ват OS Harmony OS"
+      },
+      { 
+        "id": "LenovoZ90",
+        "title": "Lenovo z90",
+        "price": 199,
+        "image": "img/lenovo.png",
+        "description": "Мій перший телефон"
+      },
+      { 
+        "id": "SamsungS23",
+        "title": "Samsung Galaxy S23",
+        "price": 899,
+        "image": "img/s244.png",
+        "description": "Мій перший телефон"
+      },
+      { 
+        "id": "Xiaomi16",
+        "title": "OmagadXimi16",
+        "price": 599,
+        "image": "img/ximi.png",
+        "description": "Мій перший телефон"
+      }
+  ]

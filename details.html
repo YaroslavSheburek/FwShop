@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="details.css">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>FwShop</title>
+</head>
+<body>
+<div id="details">
+    <p class="load">Loading...</p>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+            const params = new URLSearchParams(window.location.search);
+            const cardId = params.get("id");
+            console.log("id", cardId)
+            const cardDetailsContainer = document.getElementById("details");
+            const cardData = {
+                "Iphone": {
+                    title: "Iphone 16",
+                    description:
+                        "Дисплей 6.1 Батарея 1млн",
+                    price: "1999$",
+                    images: 'img/iphone.png',
+                    reviews: [
+                        "Iphone 16 — топовий! Камера супер, батарея тримає цілий день, а швидкість вражає. Дизайн ідеальний, рекомендую!",
+                        "Дуже крутий телефон, але дорогуватий. Оновлений Face ID і яскравий дисплей — клас! Для власників iPhone 15 не критичне оновлення.",
+                        "Швидкий, камера з крутим зумом, USB-C — нарешті. Трохи гріється, але загалом супер для любителів новинок.",
+                    ],
+                },
+                "SamsungN20": {
+                    title: "Samsung Galaxy Note 20",
+                    description:
+                        "Дисплей 1.1 Батарея 8млн",
+                    price: "499$",
+                    images: 'img/note20.png',
+                    reviews: [
+                        "Samsung Galaxy Note 20 — це стильний смартфон із яскравим дисплеєм і функціональним стилусом S Pen.",
+                        "Galaxy Note 20 — це смартфон для роботи та творчості завдяки S Pen. Великий екран, хороша камера та продуктивність — головні переваги. Відсутність картки пам’яті може бути незручністю.",
+                        "Samsung Note 20 виділяється зручним стилусом і якісним екраном. Камера чудова, а потужності вистачає для будь-яких завдань. Є мінуси — пластикова задня панель і висока ціна.",
+                    ],
+                },
+                "SamsungS24": {
+                    title: "Samsung Galaxy S24",
+                    description:
+                        "Дисплей 7.1 Батарея 5млн",
+                    price: "999$",
+                    images: 'img/s23.png',
+                    reviews: [
+                        "Galaxy S24 вражає потужним процесором і відмінною камерою. Чудовий вибір для любителів мобільної фотографії.",
+                        "Samsung Galaxy S24 приємно дивує дизайном і плавною роботою. Мінус — висока ціна.",
+                        "Samsung Galaxy S24 має яскравий дисплей, тривалий час роботи батареї та швидку зарядку. Ідеальний для щоденного використання.",
+                    ],
+                },
+                "RedmiN12": {
+                    title: "Redmi Note 12",
+                    description:
+                        "Дисплей 10 Батарея 500к",
+                    price: "199$",
+                    images: 'img/redmi.png',
+                    reviews: [
+                        "Redmi Note 12 має яскравий AMOLED-дисплей і тривалий час роботи від батареї. Це гарний варіант для тих, хто шукає доступний смартфон із якісним екраном.",
+                        "Смартфон пропонує хорошу камеру для свого класу, підтримку швидкої зарядки та стильний дизайн. Ідеальний вибір для щоденного використання.",
+                        "Redmi Note 12 вражає співвідношенням ціни та якості. Потужний процесор, плавна робота і великий екран роблять його привабливим для більшості користувачів.",
+                    ],
+                },
+                "LenovoZ90": {
+                    title: "Lenovo z90",
+                    description:
+                        "Телефончєк",
+                    price: "199$",
+                    images: 'img/lenovo.png',
+                    reviews: [
+                        "Lenovo Z90 має стильний дизайн і хорошу основну камеру, яка підходить для якісних знімків. Його зручно тримати в руці, але бракує сучасних технологій.",
+                        "Цей смартфон забезпечує стабільну роботу в щоденних задачах. Дисплей яскравий і приємний для очей, проте акумулятор потребує частішої зарядки.",
+                        "Lenovo Z90 приваблює своєю компактністю і якістю збірки. Підходить для базових потреб, але продуктивність обмежена для важких ігор чи додатків.",
+                    ],
+                },
+                    "SamsungS23": {
+                    title: "Samsung Galaxy S23",
+                    description:
+                        "Телефончєк",
+                    price: "899$",
+                    images: 'img/s244.png',
+                    reviews: [
+                        "Samsung Galaxy S23 має компактний розмір, яскравий AMOLED-дисплей і потужний процесор. Ідеально підходить для тих, хто цінує продуктивність у стильному корпусі.",
+                        "Смартфон пропонує відмінну камеру з можливістю знімати в умовах слабкого освітлення. Батарея тримається добре, але швидкість зарядки могла б бути вищою.",
+                        "Galaxy S23 вражає плавною роботою, чудовим дизайном і високою якістю матеріалів. Це надійний вибір для тих, хто шукає флагманський пристрій.",
+                    ]
+                },
+                    "Xiaomi16": {
+                    title: "OmagadXimi16",
+                    description:
+                        "Телефончєк",
+                    price: "599$",
+                    images: 'img/ximi.png',
+                    reviews: [
+                        "це потужний смартфон із сучасним дизайном та високою продуктивністю. Оснащений потужним процесором і чудовою камерою, він справляється з будь-якими завданнями, від ігор до мультимедіа.",
+                        "Смартфон має яскравий AMOLED-дисплей і тривалий час роботи від батареї. Камера робить дуже чіткі та детальні знімки, особливо в умовах низького освітлення.",
+                        "Xiaomi 14T Pro поєднує в собі високі технології, стильний дизайн і хорошу автономність. Це відмінний вибір для тих, хто хоче отримати флагманський пристрій за доступнішою ціною.",
+                    ]
+                }
+                
+
+
+            };
+
+            if (cardData[cardId]) {
+                const card = cardData[cardId];
+                cardDetailsContainer.innerHTML = `
+                <header class="header-section">
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
+          <a class="navbar-brand text-light" href="#">FwShop</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-light" aria-current="page" href="index.html">Додому</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#">Каталог</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Додатково
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Про нас</a></li>
+                  <li><a class="dropdown-item" href="#">Контакти</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Телеграм канал</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-success" type="submit">Пошук</button>
+
+            </form>
+            <button id="card-btn" class="btn btn-primary ms-1">Кошик</button>
+          </div>
+        </div>
+      </nav>
+</header>
+                <div class="container">
+                <h2 class="h2">Товар: ${card.title}</h2>
+                <h2 class="h2">Опис товару:</h2>
+                <h2 class="h2 descr">${card.description}</h2>
+                <div><img class="image" src='${card.images}'/></div>
+                <p>.</p>
+                <h1 class="h2 tovars">Ціна: ${card.price}</h1>
+                <p>.</p>
+                <h2 class="h2">Відгуки:</h2>
+                <h3 class="rewiew"> ${card.reviews[0]}</h3>
+                <h3 class="rewiew"> ${card.reviews[1]}</h3>
+                <h3 class="rewiew"> ${card.reviews[2]}</h3>
+                </div>
+                <footer class="footer">
+  <h2>Адреса магазину: Технічна 7</h2>
+  <img src="img/tiktok.png">
+  <img src="img/instagram.png">
+  <img src="img/twitter.png">
+</footer>
+                `;
+            } else {
+                cardDetailsContainer.innerHTML = `<h1>Товар не знайдено</h1>`;
+            }
+
+        })
+</script>
+
+</body>
+</html>

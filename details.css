@@ -1,0 +1,47 @@
+.load {
+    text-align: center;
+    font-size:50px;
+    font-family: sans-serif;
+}
+
+.container {
+    width:70%;
+    margin: 0 auto;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top:100px;
+    margin-bottom: 291px;
+}
+
+.h2 {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.image {
+width:250px;
+
+
+
+}
+
+.rewiew {
+border: 2px solid rgb(117, 117, 117);
+padding:20px;
+border-radius: 20px;
+background-color: rgb(211, 211, 211);
+
+}
+
+.tovars {
+    border: 2px solid rgb(117, 117, 117);
+    padding:20px;
+    border-radius: 20px;
+    background: rgb(233, 233, 233) ;
+}
+
+.descr {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
